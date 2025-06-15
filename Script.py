@@ -1,451 +1,742 @@
 import os
-class script(object):
-    START_TXT = """ʜᴇʏ {}, {}
-    
-ɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ʙᴏᴛ. ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪ ᴡɪʟʟ ɢɪᴠᴇ ᴍᴏᴠɪᴇs ᴏʀ sᴇʀɪᴇs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴘᴍ !! 😍
-<blockquote>🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/JISSHU_BOTS">Jisshu Bots &lt;/&gt;</a></blockquote>"""
-    
-    HELP_TXT = """<b>ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..</b>"""
-    
-    TELE_TXT = """<b>/telegraph - sᴇɴᴅ ᴍᴇ ᴘɪᴄᴛᴜʀᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴜɴᴅᴇʀ (5ᴍʙ)
 
-ɴᴏᴛᴇ - ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋ ɪɴ ʙᴏᴛʜ ɢʀᴏᴜᴘs ᴀɴᴅ ʙᴏᴛ ᴘᴍ</b>"""
+class script(object):
+
+    START_TXT = """<b><blockquote>Salut {}, {}</blockquote>\n\nje suis Marsh ƈɾσɯ 2.0 un puissant bot Capable de vous fournir des Films Et des Séries et même maintenant des Cartoon (dessin animé) de tout genre. Rejoins mes canaux et mon Groupe puis profite de ta journée 😍\n<blockquote>🌿 Propulsé Par : <a href="https://t.me/BotZFlix">BotZFlix</a></blockquote></b>"""
+
+    
+
+    HELP_TXT = """<b>Cliquez sur les boutons ci-dessous pour obtenir la documentation sur des modules spécifiques...</b>"""
+
+    
+
+    TELE_TXT = """<b>/telegraph - cette fonction permet de géneré un lien pour un image ≤ (5ᴍʙ)
+
+
+
+cette commande fonctionne en PV ou en Groupe</b>"""
+
+    FSUB_TXT = """<b>• Tu veux un bot pareil que moi ?. contact juste @Kingcey</b>"""
+
+
 
     FORCESUB_TEXT="""<b>
-ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ʀᴇᴏ̨ᴜᴇsᴛᴇᴅ ʙʏ ʏᴏᴜ.
 
-ʏᴏᴜ ᴡɪʟʟ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ.
+Pour obtenir le film que vous avez demandé.
 
-ғɪʀsᴛ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ "Jᴏɪɴ ᴜᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ" ʙᴜᴛᴛᴏɴ, ᴛʜᴇɴ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ "ʀᴇᴏ̨ᴜᴇsᴛ ᴛᴏ Jᴏɪɴ" ʙᴜᴛᴛᴏɴ.
 
-ᴀғᴛᴇʀ ᴛʜᴀᴛ, ᴛʀʏ ᴀᴄᴄᴇssɪɴɢ ᴛʜᴀᴛ ᴍᴏᴠɪᴇ ᴛʜᴇɴ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ "ᴛʀʏ ᴀɢᴀɪɴ" ʙᴜᴛᴛᴏɴ.
+
+Vous devez rejoindre notre chaîne officielle.
+
+
+
+D'abord, cliquez sur le bouton "Rejoindre la chaîne de mise à jour", puis cliquez sur le bouton "Demande de rejoindre".
+
+
+
+Après cela, essayez d'accéder à ce film, puis cliquez sur le bouton "Réessayer".
+
     </b>"""
+
     
+
     TTS_TXT="""
-<b>• sᴇɴᴅ /tts ᴛᴏ ᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ</b>"""
+
+<b>• Envoyez /tts pour utiliser cette fonctionnalité</b>"""
+
+
 
     DISCLAIMER_TXT = """
-<b>ᴛʜɪꜱ ɪꜱ ᴀɴ ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ.
 
-ᴀʟʟ ᴛʜᴇ ꜰɪʟᴇꜱ ɪɴ ᴛʜɪꜱ ʙᴏᴛ ᴀʀᴇ ꜰʀᴇᴇʟʏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛʜᴇ ɪɴᴛᴇʀɴᴇᴛ ᴏʀ ᴘᴏꜱᴛᴇᴅ ʙʏ ꜱᴏᴍᴇʙᴏᴅʏ ᴇʟꜱᴇ. ᴊᴜꜱᴛ ꜰᴏʀ ᴇᴀꜱʏ ꜱᴇᴀʀᴄʜɪɴɢ ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ɪɴᴅᴇxɪɴɢ ꜰɪʟᴇꜱ ᴡʜɪᴄʜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴜᴘʟᴏᴀᴅᴇᴅ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ. ᴡᴇ ʀᴇꜱᴘᴇᴄᴛ ᴀʟʟ ᴛʜᴇ ᴄᴏᴘʏʀɪɢʜᴛ ʟᴀᴡꜱ ᴀɴᴅ ᴡᴏʀᴋꜱ ɪɴ ᴄᴏᴍᴘʟɪᴀɴᴄᴇ ᴡɪᴛʜ ᴅᴍᴄᴀ ᴀɴᴅ ᴇᴜᴄᴅ. ɪꜰ ᴀɴʏᴛʜɪɴɢ ɪꜱ ᴀɢᴀɪɴꜱᴛ ʟᴀᴡ ᴘʟᴇᴀꜱᴇ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ꜱᴏ ᴛʜᴀᴛ ɪᴛ ᴄᴀɴ ʙᴇ ʀᴇᴍᴏᴠᴇᴅ ᴀꜱᴀᴘ. ɪᴛ ɪꜱ ꜰᴏʀʙɪʙʙᴇɴ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ, ꜱᴛʀᴇᴀᴍ, ʀᴇᴘʀᴏᴅᴜᴄᴇ, ꜱʜᴀʀᴇ ᴏʀ ᴄᴏɴꜱᴜᴍᴇ ᴄᴏɴᴛᴇɴᴛ ᴡɪᴛʜᴏᴜᴛ ᴇxᴘʟɪᴄɪᴛ ᴘᴇʀᴍɪꜱꜱɪᴏɴ ꜰʀᴏᴍ ᴛʜᴇ ᴄᴏɴᴛᴇɴᴛ ᴄʀᴇᴀᴛᴏʀ ᴏʀ ʟᴇɢᴀʟ ᴄᴏᴘʏʀɪɢʜᴛ ʜᴏʟᴅᴇʀ. ɪꜰ ʏᴏᴜ ʙᴇʟɪᴇᴠᴇ ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴠɪᴏʟᴀᴛɪɴɢ ʏᴏᴜʀ ɪɴᴛᴇʟʟᴇᴄᴛᴜᴀʟ ᴘʀᴏᴘᴇʀᴛʏ, ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ʀᴇꜱᴘᴇᴄᴛɪᴠᴇ ᴄʜᴀɴɴᴇʟꜱ ꜰᴏʀ ʀᴇᴍᴏᴠᴀʟ. ᴛʜᴇ ʙᴏᴛ ᴅᴏᴇꜱ ɴᴏᴛ ᴏᴡɴ ᴀɴʏ ᴏꜰ ᴛʜᴇꜱᴇ ᴄᴏɴᴛᴇɴᴛꜱ, ɪᴛ ᴏɴʟʏ ɪɴᴅᴇx ᴛʜᴇ ꜰɪʟᴇꜱ ꜰʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ. 
+<b>Ceci est un projet open source.
 
-<blockquote>🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/JISSHU_BOTS'>Jisshu Bots &lt;/&gt;</a></b></blockquote>"""
+
+
+Tous les fichiers dans ce bot sont librement disponibles sur Internet, ailleurs ou publiés par quelqu'un d'autre. Ce bot facilite simplement la recherche en indexant des fichiers déjà téléchargés sur Telegram. Nous respectons toutes les lois sur le droit d'auteur et travaillons en conformité avec le DMCA et l'EUCD. Si quelque chose est illégal, veuillez me contacter pour qu'il puisse être supprimé dès que possible. Il est interdit de télécharger, diffuser, reproduire, partager ou consommer du contenu sans autorisation explicite du créateur ou du détenteur légal des droits d'auteur. Si vous pensez que ce bot viole votre propriété intellectuelle, contactez les chaînes respectives pour leur suppression. Le bot ne possède aucun de ces contenus, il indexe simplement les fichiers à partir de Telegram.
+
+
+
+<blockquote>🌿 Maintenu par : <a href='https://t.me/BotZFlix'>BotZFlix</a></b></blockquote>"""
+
     
 
-    ABOUT_TEXT = """<blockquote><b>‣ ᴍʏ ɴᴀᴍᴇ : Jisshu filter bot
-‣ ᴄʀᴇᴀᴛᴏʀ : <a href='https://t.me/JISSHU_BOTS'>Jisshu Bots &lt;/&gt;</a>
-‣ ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ
-‣ ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ
-‣ ᴅᴀᴛᴀ ʙᴀsᴇ : ᴍᴏɴɢᴏ ᴅʙ
-‣ ʜᴏsᴛᴇᴅ ᴏɴ  :  ᴡᴇʙ
-‣ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : V-4.1 [sᴛᴀʙʟᴇ]</b></blockquote>"""    
-    
-    SUPPORT_GRP_MOVIE_TEXT = """<b>ʜᴇʏ {}
 
-ɪ ғᴏᴜɴᴅ {} ʀᴇsᴜʟᴛs 🎁,
-ʙᴜᴛ ɪ ᴄᴀɴ'ᴛ sᴇɴᴅ ʜᴇʀᴇ 🤞🏻
-ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴏᴜʀ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ ᴛᴏ ɢᴇᴛ ✨</b>"""
+
+    ABOUT_TEXT = """<blockquote><b>‣ Mon nom : Marsh-Crow\n‣ Créateur : <a href='https://t.me/Kingcey'>Master Kingcey</a>\n‣ Bibliothèque : Pyrogram\n‣ Langage : Python\n‣ Base de données : MongoDB\n‣ Hébergé sur : All Web\n‣ Statut de version : v2.1 [Stable]</b></blockquote>"""    
+
+    
+
+    SUPPORT_GRP_MOVIE_TEXT = '''<b>Salut {}
+
+
+
+J'ai trouvé {} résultats de fichiers 🎁,
+
+mais je ne peux pas les envoyer ici 🤞🏻
+
+Veuillez rejoindre notre groupe de demande pour les obtenir ✨</b>'''
+
+
 
     CHANNELS = """
-<u>ᴏᴜʀ ᴀʟʟ ɢʀᴏᴜᴘꜱ ᴀɴᴅ ᴄʜᴀɴɴᴇʟꜱ</u> 
 
-▫ ᴀʟʟ ʟᴀᴛᴇꜱᴛ ᴀɴᴅ ᴏʟᴅ ᴍᴏᴠɪᴇꜱ & ꜱᴇʀɪᴇꜱ.
-▫ ᴀʟʟ ʟᴀɴɢᴜᴀɢᴇꜱ ᴍᴏᴠɪᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ.
-▫ ᴀʟᴡᴀʏꜱ ᴀᴅᴍɪɴ ꜱᴜᴘᴘᴏʀᴛ.
-▫ 𝟸𝟺x𝟽 ꜱᴇʀᴠɪᴄᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ."""
+<u>Nos groupes et chaînes</u> 
 
-    JISSHUPREMIUM_TXT = """
-<blockquote>ᴛᴏ ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴀᴅꜱ ꜰʀᴇᴇ ꜱᴇʀᴠɪᴄᴇ ʏᴏᴜ ᴄᴀɴ ʙᴜʏ ᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ꜱᴇʀᴠɪᴄᴇ ᴏʀ ʏᴏᴜ ᴄᴀɴ ꜱʜᴀʀᴇ ᴏᴜʀ ʙᴏᴛ ᴡɪᴛʜ ʏᴏᴜʀ ꜰʀɪᴇɴᴅꜱ ᴛᴏ ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ.</blockquote>"""
-    
+
+
+▫ Tous les derniers films et séries (anciens et nouveaux).
+
+▫ Films disponibles dans toutes les langues.
+
+▫ Support admin toujours disponible.
+
+▫ Service disponible 24h/24, 7j/7."""
+
+
+
     LOGO = """
-sᴛᴀʀᴛɪɴɢ....
-sᴜᴄᴄᴇssғᴜʟʟʏ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ"""
+
+
+
+BOT FONCTIONNE PARFAITEMENT 🔥"""
+
     
+
     RESTART_TXT = """
-<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
->> {}
 
-📅 Dᴀᴛᴇ : <code>{}</code>
-⏰ Tɪᴍᴇ : <code>{}</code>
-🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code>
-🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v-3.1.2 [ Sᴛᴀʙʟᴇ ]</code>
+<b>Bot redémarré !
 
-If there is an error, ask in the support group @Jisshu_support</b>"""
+> {} 
+
+📅 Date : <code>{}</code>
+
+⏰ Heure : <code>{}</code>
+
+🌐 Fuseau horaire : <code>Asia/Kolkata</code>
+
+🛠️ Statut de version : <code>v4.2 [ Stable ]</code>
+
+
+
+Par @BotZFlix</b>"""
+
         
+
     
-    STATUS_TXT = """<b><u>♻️ ʙᴏᴛ ᴅᴀᴛᴀʙᴀsᴇ </u>
 
-» ᴛᴏᴛᴀʟ ᴜsᴇʀs - <code>{}</code>
-» ᴛᴏᴛᴀʟ ɢʀᴏᴜᴘs - <code>{}</code>
-» ᴜsᴇᴅ sᴛᴏʀᴀɢᴇ - <code>{} / {}</code>
+    STATUS_TXT = """<b><u>🗃 Base de données 1 🗃</u>
 
-<u>📁 ꜰɪʟᴇs ᴅᴀᴛᴀʙᴀsᴇ </u>
 
-» ᴛᴏᴛᴀʟ ꜰɪʟᴇs - <code>{}</code>
-» ᴜsᴇᴅ sᴛᴏʀᴀɢᴇ - <code>{} / {}</code>
 
-<u>🤖 ʙᴏᴛ ᴅᴇᴛᴀɪʟs </u>
+» Utilisateurs totaux - <code>{}</code>
 
-» ᴜᴘᴛɪᴍᴇ - <code>{}</code>
-» ʀᴀᴍ - <code>{}%</code>
-» ᴄᴘᴜ - <code>{}%</code></b>"""
+» Groupes totaux - <code>{}</code>
+
+» Stockage utilisé - <code>{} / {}</code>
+
+
+
+<u>🗳 Base de données 2 🗳</u></b>
+
+
+
+» Fichiers totaux - <code>{}</code>
+
+» Stockage utilisé - <code>{} / {}</code>
+
+
+
+<u>🤖 Détails du bot 🤖</u>
+
+
+
+» Temps de fonctionnement - <code>{}</code>
+
+» RAM - <code>{}%</code>
+
+» CPU - <code>{}%</code></b>"""
+
+
 
     NEW_USER_TXT = """<b>#New_User {}
 
+
+
 ≈ ɪᴅ:- <code>{}</code>
+
 ≈ ɴᴀᴍᴇ:- {}</b>"""
 
-    NEW_GROUP_TXT = """#New_Group {}
 
-Group name - {}
-Id - <code>{}</code>
-Group username - @{}
-Group link - {}
-Total members - <code>{}</code>
-User - {}"""
 
-    REQUEST_TXT = """<b>📜 ᴜꜱᴇʀ - {}
-📇 ɪᴅ - <code>{}</code>
+    NEW_GROUP_TXT = """#Nouveau_Groupe {}
 
-🎁 ʀᴇǫᴜᴇꜱᴛ ᴍꜱɢ - <code>{}</code></b>"""  
+
+
+Nom du groupe - {}
+
+ID - <code>{}</code>
+
+Nom d'utilisateur du groupe - @{}
+
+Lien du groupe - {}
+
+Nombre total de membres - <code>{}</code>
+
+Utilisateur - {}"""
+
+
+
+    REQUEST_TXT = """<b>📜 Utilisateur - {}
+
+📇 ID - <code>{}</code>
+
+
+
+🎁 Demande - <code>{}</code></b>"""  
+
    
-    IMDB_TEMPLATE_TXT = """
-<b>ʜᴇʏ {message.from_user.mention}, ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʀᴇꜱᴜʟᴛꜱ ꜰᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ {search}.
 
-🍿 Title: {title}
-🎃 Genres: {genres}
-📆 Year: {release_date}
-⭐ Rating: {rating} / 10</b>
+    IMDB_TEMPLATE_TXT = """
+
+<b>Salut {message.from_user.mention}, voici les résultats pour votre recherche "{search}".
+
+
+
+🍿 Titre : {title}
+
+🎃 Genres : {genres}
+
+📆 Année : {release_date}
+
+⭐ Note : {rating} / 10</b>
+
 """
 
-    FILE_CAPTION = """<b>{file_name}</b>"""
-    
 
-    ALRT_TXT = """ᴡʜᴀᴛ ᴀʀᴇ ʏᴏᴜ sᴇᴀʀᴄʜɪɴɢ !?"""
 
-    OLD_ALRT_TXT = """ʏᴏᴜ ᴀʀᴇ ᴜsɪɴɢ ᴍʏ ᴏʟᴅ ᴍᴇssᴀɢᴇs..sᴇɴᴅ ᴀ ɴᴇᴡ ʀᴇǫᴜᴇsᴛ.."""
-
-    NO_RESULT_TXT = """<b>ᴛʜɪs ᴍᴇssᴀɢᴇ ɪs ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ 🙄</b>"""
-    
-    I_CUDNT = """🤧 𝗛𝗲𝗹𝗹𝗼 {}
-
-𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆 𝗺𝗼𝘃𝗶𝗲 𝗼𝗿 𝘀𝗲𝗿𝗶𝗲𝘀 𝗶𝗻 𝘁𝗵𝗮𝘁 𝗻𝗮𝗺𝗲.. 😐"""
-
-    I_CUD_NT = """😑 𝗛𝗲𝗹𝗹𝗼 {}
-
-𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗿𝗲𝗹𝗮𝘁𝗲𝗱 𝘁𝗼 𝘁𝗵𝗮𝘁 😞... 𝗰𝗵𝗲𝗰𝗸 𝘆𝗼𝘂𝗿 𝘀𝗽𝗲𝗹𝗹𝗶𝗻𝗴."""
-    
-    CUDNT_FND = """🤧 𝗛𝗲𝗹𝗹𝗼 {}
-
-𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗿𝗲𝗹𝗮𝘁𝗲𝗱 𝘁𝗼 𝘁𝗵𝗮𝘁 𝗱𝗶𝗱 𝘆𝗼𝘂 𝗺𝗲𝗮𝗻 𝗮𝗻𝘆 𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲𝘀𝗲 ?? 👇"""
-    
-    FONT_TXT= """<b>ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴍᴏᴅᴇ ᴛᴏ ᴄʜᴀɴɢᴇ ʏᴏᴜʀ ꜰᴏɴᴛs sᴛʏʟᴇ, ᴊᴜsᴛ sᴇɴᴅ ᴍᴇ ʟɪᴋᴇ ᴛʜɪs ꜰᴏʀᴍᴀᴛ
-
-<code>/font hi how are you</code></b>"""
-
-    SPECIAL_TXT = """ Here Is My Some Special Features Broh ! """   
-
-    EARN_TEXT = """<b><i><blockquote>💸 ʜᴏᴡ ᴛᴏ ᴇᴀʀɴ ᴍᴏɴᴇʏ ʙʏ ᴛʜɪs ʙᴏᴛ - </blockquote>
-
-1:- ʏᴏᴜ ᴍᴜꜱᴛ ʜᴀᴠᴇ ᴀᴛʟᴇᴀꜱᴛ ᴏɴᴇ ɢʀᴏᴜᴘ ᴡɪᴛʜ ᴍɪɴɪᴍᴜᴍ 100 ᴍᴇᴍʙᴇʀꜱ.
-
-2:- ᴍᴀᴋᴇ ᴛʜɪs <a href=https://t.me/{}</a> ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
-
-3:- ᴄʀᴇᴀᴛᴇ ᴀᴄᴄᴏᴜɴᴛ ᴏɴ ᴀɴʏ sʜᴏʀᴛɴᴇʀ ʟɪᴋᴇ ʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴜsᴇ ᴛʜɪs ʙᴇsᴛ sʜᴏʀᴛɴᴇʀ <a href=https://linkmonetizer.in/ref/jisshu>Best Shortner</a>.
-
-4:- ᴛʜᴇɴ sᴇᴛ ʏᴏᴜʀ sʜᴏʀᴛɴᴇʀ ᴅᴇᴛᴀɪʟs ʙʏ ᴛʜɪs ꜰᴏʀᴍᴀᴛ 👇
-
-<code>/set_verify linkmonetizer.in fcee6bbc628cfc61229a2d808e1b0ee3315a0f5e</code>
-
-<code>/set_verify_2 linkmonetizer.in fcee6bbc628cfc61229a2d808e1b0ee3315a0f5e</code>
-
-<code>/set_verify_3 linkmonetizer.in fcee6bbc628cfc61229a2d808e1b0ee3315a0f5e</code>
-
-<code>/set_tutorial https://t.me/Jisshu_developer</code>
-
-<code>/set_tutorial_2 https://t.me/Jisshu_developer</code>
-
-<code>/set_tutorial_3 https://t.me/Jisshu_developer</code>
-
-<code>/set_time_2 300</code>
-
-<code>/set_time_3 300</code>
-
-<code>/set_fsub -100*******</code>
-
-<code>/set_log -100*******</code>
-
-ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀʟʟ ᴅᴇᴛᴀɪʟs ʙʏ /details ᴄᴏᴍᴍᴀɴᴅ
-
-💯 ɴᴏᴛᴇ - ᴛʜɪs ʙᴏᴛ ɪs ꜰʀᴇᴇ ᴛᴏ ᴀʟʟ, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ʙᴏᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘs ᴀɴᴅ ᴇᴀʀɴ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏɴᴇʏ.</i></b>"""
+    FILE_CAPTION = """<b>{file_name}\n\nRejoignez ➥ 「<a href="https://t.me/ZFlixTeam">𝙕𝙁𝙡𝙞𝙭-𝙏𝙚𝙖𝙢</a>」</b>"""
 
     
-    VERIFICATION_TEXT = """<b>👋 ʜᴇʏ {} {},
 
-📌 <u>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ, ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ</u>
 
-#ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ:- 1/3 ✓
 
-ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ ᴡɪᴛʜᴏᴜᴛ ᴀɴʏ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴꜱ ᴛʜᴇɴ ʙᴜʏ ʙᴏᴛ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ 😊
+    ALRT_TXT = """Dégagez vite d'ici !"""
 
-💶 sᴇɴᴅ /plan ᴛᴏ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ</b>"""
 
-    VERIFY_COMPLETE_TEXT = """<b>👋 ʜᴇʏ {},
 
-ʏᴏᴜ ʜᴀᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ 1st ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ✓
+    OLD_ALRT_TXT = """Vous utilisez mes anciens messages... Envoyez une nouvelle demande.."""
 
-ɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ꜰᴏʀ ɴᴇxᴛ <code>{}</code></b>"""
 
-    SECOND_VERIFICATION_TEXT = """<b>👋 ʜᴇʏ {} {},
 
-📌 <u>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪꜰɪᴇᴅ, ᴛᴀᴘ ᴏɴ ᴛʜᴇ ᴠᴇʀɪꜰʏ ʟɪɴᴋ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ꜰᴏʀ ᴛɪʟʟ ɴᴇxᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ</u>
+    NO_RESULT_TXT = """<b>Ce message n'est pas publié ou n'est pas dans ma base de données 🙄</b>"""
 
-#ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ:- 2/3
-
-ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ ᴡɪᴛʜᴏᴜᴛ ᴀɴʏ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴꜱ ᴛʜᴇɴ ʙᴜʏ ʙᴏᴛ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ 😊
-
-💶 sᴇɴᴅ /plan ᴛᴏ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ</b>"""
-
-    SECOND_VERIFY_COMPLETE_TEXT = """<b>👋 ʜᴇʏ {},
-
-ʏᴏᴜ ʜᴀᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ 2nd ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ✓
-
-ɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ꜰᴏʀ ɴᴇxᴛ <code>{}</code></b>"""
-
-    THIRDT_VERIFICATION_TEXT = """<b>👋 ʜᴇʏ {},
     
-📌 <u>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪꜰɪᴇᴅ ᴛᴏᴅᴀʏ, ᴛᴀᴘ ᴏɴ ᴛʜᴇ ᴠᴇʀɪꜰʏ ʟɪɴᴋ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ꜰᴏʀ ɴᴇxᴛ ꜰᴜʟʟ ᴅᴀʏ.</u>
 
-#ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ:- 3/3
+    I_CUDNT = """🤧 Bonjour {}
 
-ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴛᴀᴋᴇ ᴘʀᴇᴍɪᴜᴍ sᴇʀᴠɪᴄᴇ (ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪꜰʏ)</b>"""
 
-    THIRDT_VERIFY_COMPLETE_TEXT= """<b>👋 ʜᴇʏ {},
+
+Je n'ai pas trouvé de film ou série portant ce nom.. 😐"""
+
+
+
+    I_CUD_NT = """😑 Bonjour {}
+
+
+
+Je n'ai rien trouvé en rapport avec ça 😞... vérifiez votre orthographe."""
+
     
-ʏᴏᴜ ʜᴀᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ 3rd ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ✓
 
-ɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ꜰᴏʀ ɴᴇxᴛ ꜰᴜʟʟ ᴅᴀʏ </b>"""
-
-    VERIFIED_LOG_TEXT = """<b><u>☄ є∂ιтн ᴜsᴇʀ ᴠᴇʀɪꜰɪᴇᴅ sᴜᴄᴄᴇssꜰᴜʟʟʏ ☄</u>
-
-⚡️ ɴᴀᴍᴇ:- {} [ <code>{}</code> ] 
-📆 ᴅᴀᴛᴇ:- <code>{} </code></b>
-
-#edith_verified_{}_completed"""
+    CUDNT_FND = """🤧 Bonjour {}
 
 
-    MOVIES_UPDATE_TXT = """<b>#𝑵𝒆𝒘_𝑭𝒊𝒍𝒆_𝑨𝒅𝒅𝒆𝒅 ✅
-**🍿 Title:** {title}
-**🎃 Genres:** {genres}
-**📆 Year:** {year}
-**⭐ Rating:** {rating} / 10
+
+Je n'ai rien trouvé en rapport avec ça. Vouliez-vous dire l'un de ces résultats ? 👇"""
+
+    
+
+    FONT_TXT= """<b>Vous pouvez utiliser ce mode pour changer le style de votre police, envoyez-moi simplement un message dans ce format :
+
+
+
+<code>/font votre texte ici</code></b>"""
+
+    
+
+    PLAN_TEXT = """<b>Nous proposons un abonnement premium aux prix les plus bas :
+
+    
+
+1 Roupie par jour 👻
+
+29 Roupies pour un mois 😚
+
+55 Roupies pour deux mois 😗
+
+
+
+Cliquez sur le bouton ci-dessous pour continuer votre achat ↡↡↡
+
 </b>"""
 
-    PREPLANS_TXT = """<b>👋 ʜᴇʏ {},
+    
 
-<blockquote>🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇ ʙᴇɴɪꜰɪᴛꜱ:</blockquote>
+    VERIFICATION_TEXT = """<b>👋 Salut {} {},
 
-❏ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋꜱ
-❏ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ғɪʟᴇs   
-❏ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ 
-❏ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ                         
-❏ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs                           
-❏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs ᴀɴᴅ sᴇʀɪᴇs                                                                        
-❏ ꜰᴜʟʟ ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ                              
-❏ ʀᴇǫᴜᴇsᴛ ᴡɪʟʟ ʙᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ɪɴ 𝟷ʜ [ ɪꜰ ᴀᴠᴀɪʟᴀʙʟᴇ ]
 
-⛽️ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ: /myplan
+
+📌 <u>Vous n'êtes pas vérifié aujourd'hui, veuillez cliquer sur Vérifier pour obtenir un accès illimité jusqu'à la prochaine vérification</u>
+
+
+
+#Vérification :- 1/3 ✓
+
+
+
+Si vous voulez des fichiers directs sans vérification, prenez un abonnement au bot 😊
+
+
+
+💶 Envoyez /plan pour acheter un abonnement</b>"""
+
+
+
+    VERIFY_COMPLETE_TEXT = """<b>👋 Salut {},
+
+
+
+Vous avez complété la 1ère vérification ✓
+
+
+
+Vous avez maintenant un accès illimité pour les prochaines <code>{}</code></b>"""
+
+
+
+    SECOND_VERIFICATION_TEXT = """<b>👋 Salut {} {},
+
+
+
+📌 <u>Vous n'êtes pas vérifié, appuyez sur le lien de vérification pour obtenir un accès illimité jusqu'à la prochaine vérification</u>
+
+
+
+#Vérification :- 2/3
+
+
+
+Si vous voulez des fichiers directs sans vérification, prenez un abonnement au bot 😊
+
+
+
+💶 Envoyez /plan pour acheter un abonnement</b>"""
+
+
+
+    SECOND_VERIFY_COMPLETE_TEXT = """<b>👋 Salut {},
+
+
+
+Vous avez complété la 2ème vérification ✓
+
+
+
+Vous avez maintenant un accès illimité pour les prochaines <code>{}</code></b>"""
+
+
+
+    THIRDT_VERIFICATION_TEXT = """<b>👋 Salut {},
+
+    
+
+📌 <u>Vous n'êtes pas vérifié aujourd'hui, appuyez sur le lien de vérification pour obtenir un accès illimité pour toute la journée..</u>
+
+
+
+#Vérification :- 3/3
+
+
+
+Si vous voulez des fichiers directs, vous pouvez prendre un abonnement premium (aucune vérification nécessaire)</b>"""
+
+
+
+    THIRDT_VERIFY_COMPLETE_TEXT= """<b>👋 Salut {},
+
+    
+
+Vous avez complété la 3ème vérification ✓
+
+
+
+Vous avez maintenant un accès illimité pour toute la journée</b>"""
+
+
+
+    VERIFIED_LOG_TEXT = """<b><u>☄ Utilisateur vérifié avec succès ☄</u>
+
+
+
+⚡️ Nom :- {} [ <code>{}</code> ] 
+
+📆 Date :- <code>{}</code></b>
+
+
+
+#verified_{}_completed"""
+
+
+
+
+
+    MOVIES_UPDATE_TXT = """<b>#Nouveau_Fichier_Ajouté ✅
+
+**🍿 Titre :** {title}
+
+**🎃 Genres :** {genres}
+
+**📆 Année :** {year}
+
+**⭐ Note :** {rating} / 10
+
+</b>"""
+
+
+
+    PREPLANS_TXT = """<b>👋 Salut {},
+
+
+
+<blockquote>🎁 Avantages des fonctionnalités premium :</blockquote>
+
+
+
+❏ Pas besoin d'ouvrir des liens
+
+❏ Obtenez des fichiers directs   
+
+❏ Expérience sans publicité 
+
+❏ Lien de téléchargeement haute vitesse                        
+
+❏ Liens de streaming multi-joueurs                           
+
+❏ Films et séries illimités                                                                        
+
+❏ Support admin complet                              
+
+❏ Les demandes seront traitées en 1h [si disponible]
+
+
+
+⛽️ Vérifiez votre plan actif : /myplan
+
 </b>"""    
 
-    PREPLANSS_TXT = """<b>👋 ʜᴇʏ {}
+
+
+    PREPLANSS_TXT = """<b>👋 Salut {}
+
     
-<blockquote>🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇ ʙᴇɴɪꜰɪᴛꜱ:</blockquote>
 
-❏ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋꜱ
-❏ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ғɪʟᴇs   
-❏ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ 
-❏ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ                         
-❏ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs                           
-❏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs ᴀɴᴅ sᴇʀɪᴇs                                                                        
-❏ ꜰᴜʟʟ ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ                              
-❏ ʀᴇǫᴜᴇsᴛ ᴡɪʟʟ ʙᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ɪɴ 𝟷ʜ [ ɪꜰ ᴀᴠᴀɪʟᴀʙʟᴇ ]
+<blockquote>🎁 Avantages des fonctionnalités premium :</blockquote>
 
-⛽️ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ: /myplan
+
+
+❏ Pas besoin d'ouvrir des liens
+
+❏ Obtenez des fichiers directs   
+
+❏ Expérience sans publicité 
+
+❏ Lien de téléchargeement haute vitesse                        
+
+❏ Liens de streaming multi-joueurs                           
+
+❏ Films et séries illimités                                                                        
+
+❏ Support admin complet                              
+
+❏ Les demandes seront traitées en 1h [si disponible]
+
+
+
+⛽️ Vérifiez votre plan actif : /myplan
+
 </b>"""
 
-    OTHER_TXT = """<b>👋 ʜᴇʏ {},
+
+
+    OTHER_TXT = """<b>👋 Salut {},
+
     
-🎁 <u>ᴏᴛʜᴇʀ ᴘʟᴀɴ</u>
-⏰ ᴄᴜꜱᴛᴏᴍɪꜱᴇᴅ ᴅᴀʏꜱ
-💸 ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴅᴀʏꜱ ʏᴏᴜ ᴄʜᴏᴏꜱᴇ
 
-🏆 ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴀ ɴᴇᴡ ᴘʟᴀɴ ᴀᴘᴀʀᴛ ꜰʀᴏᴍ ᴛʜᴇ ɢɪᴠᴇɴ ᴘʟᴀɴ, ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴛᴀʟᴋ ᴛᴏ ᴏᴜʀ <a href='https://telegram.dog/JisshuDeveloperBot'>ᴏᴡɴᴇʀ</a> ᴅɪʀᴇᴄᴛʟʏ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ᴛʜᴇ ᴄᴏɴᴛᴀᴄᴛ ʙᴜᴛᴛᴏɴ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.
+🎁 <u>Autre plan</u>
+
+⏰ Jours personnalisés
+
+💸 Selon les jours que vous choisissez
+
+
+
+🏆 Si vous voulez un nouveau plan différent de ceux proposés, vous pouvez parler directement à notre <a href='https://t.me/Kingcey'>propriétaire</a> en cliquant sur le bouton contact ci-dessous.
+
     
-👨‍💻 ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ᴏᴡɴᴇʀ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴏᴛʜᴇʀ ᴘʟᴀɴ.
 
-➛ ᴜꜱᴇ /plan ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴏᴜʀ ᴘʟᴀɴꜱ ᴀᴛ ᴏɴᴄᴇ.
-➛ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ ʙʏ ᴜꜱɪɴɢ : /myplan</b>"""
+👨‍💻 Contactez le propriétaire pour obtenir votre autre plan.
 
-    FREE_TXT = """<b>👋 ʜᴇʏ {}
+
+
+➛ Utilisez /plan pour voir tous nos plans d'un coup.
+
+➛ Vérifiez votre plan actif avec : /myplan</b>"""
+
+
+
+    FREE_TXT = """<b>👋 Salif {}
+
     
-<blockquote>🎖️ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴꜱ :</blockquote>
 
- ❏ 𝟶𝟷𝟻₹    ➠    𝟶𝟷 ᴡᴇᴇᴋꜱ
- ❏ 𝟶𝟹𝟿₹    ➠    𝟶𝟷 ᴍᴏɴᴛʜ
- ❏ 𝟶𝟽𝟻₹    ➠    𝟶𝟸 ᴍᴏɴᴛʜ
- ❏ 𝟷𝟷𝟶₹    ➠    𝟶𝟹 ᴍᴏɴᴛʜ
- ❏ 𝟷𝟿𝟿₹    ➠    𝟶𝟼 ᴍᴏɴᴛʜ
- ❏ 𝟹𝟼𝟶₹    ➠    𝟷𝟸 ᴍᴏɴᴛʜ
+<blockquote>🎖️Plans premium disponibles :</blockquote>
 
-🆔 ᴜᴘɪ ɪᴅ ➩ <code>jishan@fam</code> [ᴛᴀᴘ ᴛᴏ ᴄᴏᴘʏ]
+
+
+ ❏ 500F   ➠    01 semaine
+
+ ❏ 1000F    ➠    01 mois
+
+ ❏ 1700F    ➠    02 mois
+
+ ❏ 2500F    ➠    03 mois
+
+ ❏ 3800F    ➠    06 mois
+
+ ❏ 5000F    ➠    12 mois
+
+
+
+Adresse $TON ➩ <code>UQB8a-qTnI_c9oPkWIXNDMNs6Z_C-TDdYFwLKQ_m_b7essq9</code> [appuyez pour copier]
+
+
+
+Adresse $USDT TRC20 ➩ <code>TYUGH5DtPc2gcz1v6hgEU2igdZ8sQ8HE9h</code>
+
  
-⛽️ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ: /myplan
 
-🏷️ <a href='https://telegram.dog/JisshuDeveloperBot'>ᴘʀᴇᴍɪᴜᴍ ᴘʀᴏᴏꜰ</a>
+⛽️ Vérifiez votre plan actif : /myplan
 
-‼️ ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ.
-‼️ ɢɪᴠᴇ ᴜꜱ ꜱᴏᴍᴇᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴘʀᴇᴍɪᴜᴍ ʟɪꜱᴛ.
+
+
+🏷️ <a href='https://t.me/ZFliTeam1'>Preuve premium</a>
+
+
+
+‼️ Doit envoyer une capture d'écran après paiement.
+
+‼️ Donnez-nous un peu de temps pour vous ajouter à la liste premium.
+
 </b>"""
-    
-    ADMIN_CMD_TXT_TO1 = """<b><blockquote>
---------------Index File--------------
-➩ /index - Index all files
---------------Leave Link--------------
-➩ /leave {group ID} - Leave the specified group
--------------Send Message-------------
-➩ /send {user name} - Use this command as a reply to any message
-----------------Ban User---------------
-➩ /ban {user name} - Ban user 
-➩ /unban {user name} - Unban user
---------------Broadcast--------------
-➩ /broadcast - Broadcast a message to all users
-➩ /grp_broadcast - Broadcast a message to all connected groups
--------------------------------------------
-/ads - IB
-</blockquote></b>"""
+
+
 
     ADMIN_CMD_TXT = """<b><blockquote>
--------------User Premium------------
-➩ /add_premium {user ID} {Times} - Add a premium user
-➩ /remove_premium {user ID} - Remove a premium user
-➩ /add_redeem - Generate a redeem code
-➩ /premium_users - List all premium users
-➩ /refresh - Refresh free trial for users
--------------Update Channel----------
-➩ /set_muc {channel ID} - Set the movies update channel
---------------PM Search--------------
-➩ /pm_search_on - Enable PM search
-➩ /pm_search_off - Disable PM search
---------------Index File--------------
-➩ /index - Index all files
---------------Leave Link--------------
-➩ /leave {group ID} - Leave the specified group
---------------Broadcast--------------
-➩ /broadcast - /grp_broadcast
---------------Set Ads----------------
-➩ /set_ads {ads name}#{Times}#{photo URL} - <a href="https://t.me/Jisshu_developer/11">Explain</a>
-➩ /del_ads - Delete ads
--------------Top Trending------------
-➩ /setlist {Mirzapur, Money Heist} - <a href="https://t.me/Jisshu_developer/10">Explain</a>
-➩ /clearlist - Clear all lists
+
+-------------Utilisateur Premium------------
+
+➩ /add_premium {ID utilisateur} {Durée} - Ajouter un utilisateur premium
+
+➩ /remove_premium {ID utilisateur} - Retirer un utilisateur premium
+
+➩ /add_redeem - Générer un code de rédemption
+
+➩ /premium_users - Lister tous les utilisateurs premium
+
+➩ /refresh - Actualiser l'essai gratuit pour les utilisateurs
+
+-------------Chaîne de mise à jour----------
+
+➩ /set_muc {ID de chaîne} - Définir la chaîne de mise à jour des films
+
+--------------Recherche en MP--------------
+
+➩ /pm_search_on - Activer la recherche en MP
+
+➩ /pm_search_off - Désactiver la recherche en MP
+
+--------------Vérification ID--------------
+
+➩ /verify_id - Générer un ID de vérification pour usage groupe uniquement
+
+--------------Définir Publicités-----------
+
+➩ /set_ads {nom pub}}#{Durée}#{URL photo} - <a href="https://t.me/Jisshu_developer/11">Explication</a>
+
+➩ /del_ads - Supprimer les pubs
+
+-------------Top Tendances------------
+
+➩ /setlist {Mirzapur, Money Heist} - <a href=https://t.me/Jisshu_developer/10>Explication</a>
+
+➩ /clearlist - Vider toutes les listes
+
 </blockquote></b>"""
+
+
+
+    ADMIN_CMD_TXT2 = """<b><blockquote>
+
+--------------Indexer Fichiers--------------
+
+➩ /index - Indexer tous les fichiers
+
+--------------Quitter Groupe--------------
+
+➩ /leave {ID groupe} - Quitter le groupe spécifié
+
+-------------Envoyer Message-------------
+
+➩ /send {nom-utilisateur} - Utiliser en réponse à un message
+
+----------------Bannir Utilisateur---------------
+
+➩ /ban {nom-utilisateur} - Bannir utilisateur 
+
+➩ /unban {nom-utilisateur} - Débannir utilisateur
+
+--------------Diffusion--------------
+
+➩ /broadcast - Diffuser un message à tous les utilisateurs
+
+➩ /grp_broadcast - Diffuser un message à tous les groupes connectés
+
+
+
+</blockquote></b>"""
+
     
+
     GROUP_TEXT = """<b><blockquote>
- --------------Set Verify-------------
-/set_verify {{website link}} {{website api}}
-/set_verify_2 {{website link}} {{website api}}
-/set_verify_3 {{website link}} {{website api}}
--------------Set Verify Time-----------
-/set_time_2 {{seconds}} Sᴇᴛ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛɪᴍᴇ
-/set_time_3 {{seconds}} Sᴇᴛ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛɪᴍᴇ
---------------Verify On Off------------
-/verifyoff - off verification <a href="https://telegram.dog/JisshuDeveloperBot">Cᴏɴᴛᴀᴄᴛ</a> ᴛʜᴇ ʙᴏᴛ ᴀᴅᴍɪɴ ғᴏʀ ᴀ ᴠᴇʀɪғʏ.ᴏғғ
-/verifyon - on verification 
-------------Set File Caption-----------
-/set_caption - set coustom file caption 
------------Set Imdb Template-----------
-/set_template - set IMDb template <a href="https://t.me/Jisshu_developer/8">Example</a>
---------------Set Tutorial-------------
-/set_tutorial - set verification tutorial 
--------------Set Log Channel-----------
---> ᴀᴅᴅ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ʙʏ ᴛʜɪs ꜰᴏʀᴍᴀᴛ & ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ɪs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ 👇
 
-/set_log {{log channel id}}
+ --------------Définir Vérification-------------
+
+/set_verify {{lien site}} {{api site}}
+
+/set_verify_2 {{lien site}} {{api site}}
+
+/set_verify_3 {{lien site}} {{api site}}
+
+-------------Définir Temps Vérification-----------
+
+/set_time_2 {{secondes}} Définir le temps de 2ème vérification
+
+/set_time_3 {{secondes}} Définir le temps de 3ème vérification
+
+--------------Activer/Désactiver Vérification------------
+
+/verifyoff {{code verify.off}} - Désactiver vérification <a href="https://t.me/Kingcey">Contacter</a> l'admin pour un code verify.off
+
+/verifyon - Activer vérification 
+
+------------Définir Légende Fichier-----------
+
+/set_caption - définir une légende personnalisée 
+
+-----------Définir Modèle Imdb-----------
+
+/set_template - définir modèle IMDb <a href="https://t.me/Kingcey">Exemple</a>
+
+--------------Définir Tutoriel-------------
+
+/set_tutorial - définir tutoriel de vérification 
+
+-------------Définir Chaîne de Logs-----------
+
+--> ajouter une chaîne de logs avec ce format et s'assurer que le bot est admin dans votre chaîne de logs 👇
+
+
+
+/set_log {{ID chaîne logs}}
+
 ---------------------------------------
-ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀʟʟ ᴅᴇᴛᴀɪʟs 
-ʙʏ /details ᴄᴏᴍᴍᴀɴᴅ
-</blockquote>
-Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴀɴᴅ ᴜsᴇ ᴀʟʟ ғᴇᴀᴛᴜʀᴇs😇</b>"""
 
-    ALLADMINCMD_TXT = """<b><blockquote expandable>
--------------User Premium------------
-➩ /add_premium {user ID} {Times} - Add a premium user
-➩ /remove_premium {user ID} - Remove a premium user
-➩ /add_redeem - Generate a redeem code
-➩ /premium_users - List all premium users
-➩ /refresh - Refresh free trial for users
--------------Update Channel----------
-➩ /set_muc {channel ID} - Set the movies update channel
---------------PM Search--------------
-➩ /pm_search_on - Enable PM search
-➩ /pm_search_off - Disable PM search
---------------Verify ID--------------
-➩ /verifyon - on verification 
-➩ /verifyoff - off verification only for group
---------------Set Ads----------------
-➩ /set_ads {ads name}#{Times}#{photo URL} - <a href="https://t.me/Jisshu_developer/11">Explain</a>
-➩ /del_ads - Delete ads
--------------Top Trending------------
-➩ /setlist {Mirzapur, Money Heist} - <a href="https://t.me/Jisshu_developer/10">Explain</a>
-➩ /clearlist - Clear all lists
---------------Index File--------------
-➩ /index - Index all files
---------------Leave Link--------------
-➩ /leave {group ID} - Leave the specified group
--------------Send Message-------------
-➩ /send {user-name} - Use this command as a reply to any message
-----------------Ban User---------------
-➩ /ban {user-name} - Ban user 
-➩ /unban {user-name} - Unban user
---------------Broadcast--------------
-➩ /broadcast - Broadcast a message to all users
-➩ /grp_broadcast - Broadcast a message to all connected groups
--------------------------------------------
-/ads - to set advertisement
-/reset_group - reset to default
-/movie_update_off - update off
-/movie_update_on - Movie Update on</blockquote></b>"""
+Vous pouvez vérifier tous vos détails 
+
+avec la commande /details
+
+</blockquote>
+
+Pour m'ajouter à votre Groupe, il faudra Payer 😇</b>"""
+
+
 
     SOURCE_TXT = """<b>
-ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ʜᴇʀᴇ ◉› :<blockquote><a href="https://t.me/JISSHU_BOTS/589">&lt;Click Here&gt;</a></blockquote>
 
-ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : @jisshu_bots
+NOTE:
+
+- Code source ici ◉› :<blockquote><a href="https://t.me/BotZFlix">Marsh-Crow Bot</a></blockquote>
+
+
+
+Développeur : Master Kingcey
+
 </b>""" 
-    GROUP_C_TEXT = """<b><blockquote>
- --------------Set Verify-------------
-/set_verify {website link} {website api}
-/set_verify_2 {website link} {website api}
-/set_verify_3 {website link} {website api}
--------------Set Verify Time-----------
-/set_time_2 {seconds} Sᴇᴛ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛɪᴍᴇ
-/set_time_3 {seconds} Sᴇᴛ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛɪᴍᴇ
---------------Verify On Off------------
-/verifyoff {verify.off code} - off verification <a href="https://telegram.dog/JisshuDeveloperBot">Cᴏɴᴛᴀᴄᴛ</a> ᴛʜᴇ ʙᴏᴛ ᴀᴅᴍɪɴ ғᴏʀ ᴀ ᴠᴇʀɪғʏ.ᴏғғ ᴄᴏᴅᴇ
-/verifyon - on verification 
-------------Set File Caption-----------
-/set_caption - set coustom file caption 
------------Set Imdb Template-----------
-/set_template - set IMDb template <a href="https://t.me/Jisshu_developer/8">Example</a>
---------------Set Tutorial-------------
-/set_tutorial {tutorial link} - set 1 verification tutorial 
-/set_tutorial_2 {tutorial link} - set 2 verification tutorial 
-/set_tutorial_3 {tutorial link} - set 3 verification tutorial 
--------------Set Log Channel-----------
---> ᴀᴅᴅ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ʙʏ ᴛʜɪs ꜰᴏʀᴍᴀᴛ & ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ɪs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ 👇
 
-/set_log {log channel id}
+
+
+    GROUP_C_TEXT = """<b><blockquote>
+
+ --------------Définir Vérification-------------
+
+/set_verify {lien site} {api site}
+
+/set_verify_2 {lien site} {api site}
+
+/set_verify_3 {lien site} {api site}
+
+-------------Définir Temps Vérification-----------
+
+/set_time_2 {secondes} Définir le temps de 2ème vérification
+
+/set_time_3 {secondes} Définir le temps de 3ème vérification
+
+--------------Activer/Désactiver Vérification------------
+
+/verifyoff {code verify.off} - Désactiver vérification <a href="https://t.me/IM_JISSHU">Contacter</a> l'admin pour un code verify.off
+
+/verifyon - Activer vérification 
+
+------------Définir Légende Fichier-----------
+
+/set_caption - définir légende personnalisée 
+
+-----------Définir Modèle Imdb-----------
+
+/set_template - définir modèle IMDb <a href="https://t.me/Jisshu_developer/8">Exemple</a>
+
+--------------Définir Tutoriel-------------
+
+/set_tutorial {lien tutoriel} - définir 1er tutoriel vérification 
+
+/set_tutorial_2 {lien tutoriel} - définir 2ème tutoriel vérification 
+
+/set_tutorial_3 {lien tutoriel} - définir 3ème tutoriel vérification 
+
+-------------Définir Chaîne de Logs-----------
+
+--> ajouter une chaîne de logs avec ce format et s'assurer que le bot est admin dans votre chaîne de logs 👇
+
+
+
+/set_log {ID chaîne logs}
+
 ---------------------------------------
-ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀʟʟ ᴅᴇᴛᴀɪʟs 
-ʙʏ /details ᴄᴏᴍᴍᴀɴᴅ
+
+Vous pouvez vérifier tous vos détails 
+
+avec la commande /details
+
 </blockquote>
-Iғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛs ᴘʟᴇᴀsᴇ <a href="https://telegram.dog/JisshuDeveloperBot">ᴄᴏɴᴛᴀᴄᴛ</a> ᴍʏ <a href="https://telegram.dog/im_jisshu">Z I Ƨ Ή Λ П ♡</a></b>"""
+
+Si vous avez des questions, veuillez <a href="https://t.me/Kingcey">contacter</a> mon <a href="https://t.me/Kingcey">admin</a></b>"""
+
